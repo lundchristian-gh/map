@@ -10,6 +10,11 @@ const MapStyle = {
     SatelliteStreets: "mapbox://styles/mapbox/satellite-streets-v12",
 };
 
+const Endpoint = {
+    Token: "/token",
+    Data: "/data",
+};
+
 const mapConfig = {
     container: "map",
     zoom: 9,
@@ -57,7 +62,7 @@ function buildMap(token) {
 
 async function fetchMapboxToken() {
     try {
-        const response = await fetch("config.json");
+        const response = await fetch(Endpoint.Token);
         const data = await response.json();
         return data.MAPBOX_TOKEN;
     } catch (error) {
@@ -172,7 +177,7 @@ async function init() {
     const mbToken = await fetchMapboxToken();
     if (mbToken) {
         const map = buildMap(mbToken);
-        const geojson = await fetchGeoJSON("data.geojson");
+        const geojson = await fetchGeoJSON(Endpoint.Data);
 
         if (map && geojson) {
             applyGeoJSON(map, geojson);
