@@ -1,0 +1,1055 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Revbergtinden",
+                "masl": 964,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4685326,
+                    69.7180472
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Store Blåmannen",
+                "masl": 1044,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5920429229736,
+                    69.7342262981301
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Skittentinden",
+                "masl": 1042,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4427833557129,
+                    69.6755181622683
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Store Hollendaren",
+                "masl": 1029,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4360885620117,
+                    69.723758878618
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Storsteinnestindan",
+                "masl": 1017,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5079288482666,
+                    69.6773664332005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hollendarne",
+                "masl": 1016,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5513162612915,
+                    69.7314166612453
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Middagstinden",
+                "masl": 1006,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4072494506836,
+                    69.6758759046894
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Orvasstinden",
+                "masl": 980,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5660362243652,
+                    69.7470656018487
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Storstolpan",
+                "masl": 974,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4038162231445,
+                    69.7261531627612
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Breitinden",
+                "masl": 963,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5302877426147,
+                    69.7447182559812
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Styrmannstinden",
+                "masl": 955,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5335922241211,
+                    69.7272238108864
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nattmålstuva/Mjeldskartinden",
+                "masl": 952,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4621810913086,
+                    69.5932266644772
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Durmålsfjellet",
+                "masl": 921,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4567737579346,
+                    69.6179027130028
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vasstinden",
+                "masl": 900,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.2863998413086,
+                    69.6382800071354
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Durmålsfjellet (Sørtopp)",
+                "masl": 893,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4695625305176,
+                    69.6073777617878
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mjeldskartinden",
+                "masl": 886,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4881019592285,
+                    69.5955309719588
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Melketinden",
+                "masl": 895,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5270690917969,
+                    69.7192670063786
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Buren",
+                "masl": 802,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5869789123535,
+                    69.7133457983558
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Skamtinden",
+                "masl": 884,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3394432067871,
+                    69.7194752599345
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Brosmetinden",
+                "masl": 525,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3206462860107,
+                    69.7541654792246
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sørtinden",
+                "masl": 724,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3230495452881,
+                    69.7615005038393
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mellomtinden",
+                "masl": 634,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3378982543945,
+                    69.7733440117473
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tromtinden",
+                "masl": 636,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3574676513672,
+                    69.7800790836802
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Gråtinden",
+                "masl": 871,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4906768798828,
+                    69.5746933730647
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Trehørningen",
+                "masl": 868,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3761787414551,
+                    69.6848771035693
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Stålhovet",
+                "masl": 861,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5989093780518,
+                    69.6437743512307
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lille Blåmannen",
+                "masl": 844,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.6156463623047,
+                    69.6396835887456
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Breitinden",
+                "masl": 843,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.2663154602051,
+                    69.6861286234801
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bremnestinden",
+                "masl": 786,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.2230567932129,
+                    69.6908658514012
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Skitnskardfjellet",
+                "masl": 824,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5252666473389,
+                    69.6142554496422
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Styrmannen",
+                "masl": 818,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3172130584717,
+                    69.6752349452413
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Stappen",
+                "masl": 570,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.2727527618408,
+                    69.6665279045018
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kjølen",
+                "masl": 790,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.786792755127,
+                    69.7336019666224
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Blåskredtinden",
+                "masl": 785,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3493995666504,
+                    69.6626950784169
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nordfjordtinden",
+                "masl": 769,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3580684661865,
+                    69.6463120199006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Rødtinden",
+                "masl": 776,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5609292984009,
+                    69.7143575793167
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ramnberget",
+                "masl": 743,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4470319747925,
+                    69.7594517046913
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Synnøvjordtinden",
+                "masl": 783,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3799982070923,
+                    69.5984633666602
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Finnkollen",
+                "masl": 687,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3349800109863,
+                    69.5878090644522
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Middagsfjellet",
+                "masl": 678,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5504150390625,
+                    69.764647547353
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Brattfjellet",
+                "masl": 557,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5917854309082,
+                    69.7862485405747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kinnbeinet",
+                "masl": 657,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.3119773864746,
+                    69.6538336808802
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Krabbåsen",
+                "masl": 189,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.9938163757324,
+                    69.7445102507398
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nordtinden",
+                "masl": 640,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7431907653809,
+                    69.8276676310287
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Guratinden",
+                "masl": 424,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7204456329346,
+                    69.8162692078223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Laukviktinden",
+                "masl": 590,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7130641937256,
+                    69.8357168240716
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Oterstrandtinden",
+                "masl": 508,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7119483947754,
+                    69.8544665986573
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Gamviktinden",
+                "masl": 474,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7773513793945,
+                    69.8705414120389
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sørtinden",
+                "masl": 471,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.8716793060303,
+                    69.7604909754677
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Trehørningen",
+                "masl": 283,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.786792755127,
+                    69.7905186464193
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Durmålsfjellet",
+                "masl": 346,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.828592300415,
+                    69.7936020742016
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Straumsaksla",
+                "masl": 784,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5281848907471,
+                    69.6384293287318
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Djeveltanna",
+                "masl": 963,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4776306152344,
+                    69.6744448988211
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "884",
+                "masl": 884,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5220909118652,
+                    69.6693163353691
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ørnflygnakken",
+                "masl": 154,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.0585193634033,
+                    69.6145544291646
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Torsnesaksla",
+                "masl": 249,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.0327701568604,
+                    69.5640571565487
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nattmålsfjellet",
+                "masl": 297,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.6276626586914,
+                    69.6843109155408
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Middagsfjellet",
+                "masl": 323,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.8548564910889,
+                    69.8131002384674
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sandvikfjellet",
+                "masl": 361,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.1661510467529,
+                    69.5416288420488
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Grønnlibruna",
+                "masl": 401,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7050819396973,
+                    69.5969672973296
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Storfjellet",
+                "masl": 415,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.6819076538086,
+                    69.6690181249585
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lakstinden",
+                "masl": 455,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.1426334381104,
+                    69.6175738870166
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Auteråsfjellet",
+                "masl": 467,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.9686679840088,
+                    69.7821555446033
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Rødfjellet",
+                "masl": 542,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.2190227508545,
+                    69.5913112063329
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kvitfjell",
+                "masl": 566,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.1314754486084,
+                    69.5829290529903
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Rødtinden",
+                "masl": 470,
+                "visited": "winter"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7481849,
+                    69.7034814
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Steinskartinden",
+                "masl": 817,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.5884809,
+                    69.6478196
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Finnlandsfjellet",
+                "masl": 501,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7992522,
+                    69.7066885
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tverrfjellet",
+                "masl": 524,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.4279776,
+                    69.6481181
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hillesøytoppen",
+                "masl": 214,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    17.9694798,
+                    69.6421772
+                ]
+            }
+        }
+    ]
+}

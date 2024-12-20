@@ -1,0 +1,21 @@
+{
+    "workbench.colorTheme": "Cobalt2",
+    "editor.fontFamily": "Victor Mono, monospace",
+    "editor.fontSize": 12,
+    "editor.lineHeight": 25,
+    "editor.cursorWidth": 5,
+    "editor.letterSpacing": 0.5,
+    "files.trimTrailingWhitespace": true,
+    "editor.fontWeight": "400",
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "solid",
+    "editor.renderWhitespace": "all",
+    "editor.formatOnSave": true,
+    // extensions
+    "cSpell.words": [
+        "mapboxgl",
+        "selectbox",
+        "streamlit"
+    ],
+    "autoDocstring.docstringFormat": "google"
+}
