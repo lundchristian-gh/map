@@ -7,13 +7,21 @@
             rel="stylesheet"
             href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css"
         />
+        <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/static/style.css" />
         <title>MapApp</title>
     </head>
     <body>
         <div id="map"></div>
-        <div id="info-box"></div>
+        <div id="info-box">
+            <h2>Kvaløya</h2>
+            <p>All peaks with a prominence of 100 meters</p>
+        </div>
+        <div id="settings-box">
+            <button class="theme-button" data-theme="day">🌞</button>
+            <button class="theme-button" data-theme="night">🌙</button>
+        </div>
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
-        <script src="/static/script.js"></script>
+        <script type="module" src="/static/script.js"></script>
     </body>
 </html>
