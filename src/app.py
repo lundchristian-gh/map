@@ -6,13 +6,26 @@ flask_cors.CORS(app)
 
 
 @app.route("/token")
-def get_config():
+def get_token():
     return flask.send_from_directory("data", "config.json")
 
 
-@app.route("/data")
-def get_geojson():
-    return flask.send_from_directory("data", "data.geojson")
+@app.route("/whale")
+def get_whale():
+    return flask.send_from_directory("data", "whale.geojson")
+
+
+@app.route("/other")
+def get_other():
+    return flask.send_from_directory("data", "other.geojson")
+
+
+@app.route("/worker")
+def service_worker():
+    response = flask.send_from_directory("static", "service-worker.js")
+    response.cache_control.max_age = 3600
+    response.cache_control.must_revalidate = True
+    return response
 
 
 @app.route("/")

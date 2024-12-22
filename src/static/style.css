@@ -16,6 +16,22 @@ body {
     padding: 0;
 }
 
+/********** COMMON **********/
+
+.box {
+    position: absolute;
+    z-index: 1;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--light);
+    border: 1px solid var(--greyer);
+    background-color: var(--dark);
+    box-shadow: 0 4px 6px var(--darkest);
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
 /********** MAP **********/
 
 #map {
@@ -53,25 +69,14 @@ body {
     color: var(--grey);
 }
 
-/********** SETTINGS **********/
+/********** SKY **********/
 
-#settings-box {
-    position: absolute;
-    z-index: 1;
+#sky-box {
     top: 20px;
     right: 10px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    color: var(--light);
-    border: 1px solid var(--greyer);
-    background-color: var(--dark);
-    box-shadow: 0 4px 6px var(--darkest);
-    gap: 10px;
-    display: flex;
-    align-items: center;
 }
 
-.theme-button {
+.button {
     padding: 8px 16px;
     border: 1px solid var(--grey);
     border-radius: 20px;
@@ -83,25 +88,27 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.theme-button:hover {
+.button:hover {
     background-color: var(--blue);
     color: var(--dark);
 }
 
-.theme-button:focus {
+.button:focus {
     outline: none;
     border: 1px solid var(--blue);
     box-shadow: 0 0 5px var(--blue);
 }
 
-.theme-button[data-theme="night"] {
+.button {
     color: var(--light);
     background-color: var(--dark);
 }
 
-.theme-button[data-theme="day"] {
-    color: var(--light);
-    background-color: var(--dark);
+/********** LAYER **********/
+
+#layer-box {
+    top: 100px;
+    right: 10px;
 }
 
 /********** POPUP **********/

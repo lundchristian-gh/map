@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", init);
 let map = null;
 let token = null;
 let config = null;
-let geojson = null;
+let whaleGJ = null;
+let otherGJ = null;
+let markers = [];
 
 function renderPopup(props) {
     return `
@@ -18,18 +20,63 @@ function renderPopup(props) {
 }
 
 function addEventHandlers() {
-    const dayButton = document.querySelector("[data-theme='day']");
-    const nightButton = document.querySelector("[data-theme='night']");
+    const whaleButton = document.getElementById("whale");
+    const otherButton = document.getElementById("other");
+    whaleButton.addEventListener("click", () => onChangeDataLayer(whaleGJ));
+    otherButton.addEventListener("click", () => onChangeDataLayer(otherGJ));
+
+    const dayButton = document.getElementById("day");
+    const nightButton = document.getElementById("night");
     dayButton.addEventListener("click", () => onChangeTheme("day"));
     nightButton.addEventListener("click", () => onChangeTheme("night"));
+}
+
+function addServiceWorkers() {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+            .register(Endpoint.Worker)
+            .then((registration) => {
+                console.log(registration.scope);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
 }
 
 async function init() {
     config = NightConfig;
     token = await fetchData(Endpoint.Token);
-    geojson = await fetchData(Endpoint.Data);
+    whaleGJ = await fetchData(Endpoint.Whale);
+    otherGJ = await fetchData(Endpoint.Other);
     addEventHandlers();
+    // addServiceWorkers();
     main();
+}
+
+async function onChangeDataLayer(geojson) {
+    if (map && geojson) {
+        markers.forEach((marker) => marker.remove());
+        markers = [];
+
+        geojson.features.forEach((feature) => {
+            const properties = feature.properties;
+            const coordinates = feature.geometry.coordinates;
+
+            const popup = new mapboxgl.Popup({ maxWidth: "400px" }).setHTML(
+                renderPopup(properties)
+            );
+
+            const marker = new mapboxgl.Marker({
+                color: getColorBasedOn(properties.visited),
+            })
+                .setLngLat(coordinates)
+                .setPopup(popup)
+                .addTo(map);
+
+            markers.push(marker);
+        });
+    }
 }
 
 function onChangeTheme(theme) {
@@ -44,7 +91,7 @@ function onChangeTheme(theme) {
 }
 
 function main() {
-    if (token && geojson) {
+    if (token && whaleGJ) {
         mapboxgl.accessToken = token.token;
         map = new mapboxgl.Map(config.Map);
         map.on("style.load", () => {
@@ -53,7 +100,7 @@ function main() {
             map.setTerrain(config.Terrain);
         });
         map.on("load", () => {
-            geojson.features.forEach((feature) => {
+            whaleGJ.features.forEach((feature) => {
                 const properties = feature.properties;
                 const coordinates = feature.geometry.coordinates;
                 const popup = new mapboxgl.Popup({ maxWidth: "400px" }).setHTML(
@@ -65,6 +112,7 @@ function main() {
                     .setLngLat(coordinates)
                     .setPopup(popup)
                     .addTo(map);
+                markers.push(marker);
             });
         });
     } else {

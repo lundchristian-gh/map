@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Breitinden",
+                "masl": 860,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.1239277,
+                    69.8455882
+                ]
+            }
+        }
+    ]
+}

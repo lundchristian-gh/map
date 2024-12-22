@@ -62,6 +62,8 @@ export const DayConfig = {
 };
 
 export const Endpoint = {
+    Whale: "/whale",
+    Other: "/other",
     Token: "/token",
-    Data: "/data",
+    Worker: "/worker",
 };
