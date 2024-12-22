@@ -35,3 +35,14 @@ export async function fetchData(url) {
         return null;
     }
 }
+
+export function errorPage() {
+    return `
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; background-color: #f8d7da; color: #721c24;">
+            <div>
+                <h1>Error</h1>
+                <p>Something went wrong. Please try again later.</p>
+            </div>
+        </div>
+    `;
+}

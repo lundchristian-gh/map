@@ -49,3 +49,17 @@ self.addEventListener("activate", (event) => {
         })
     );
 });
+
+// use this in main script
+function addServiceWorkers() {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+            .register(Endpoint.Worker)
+            .then((registration) => {
+                console.log(registration.scope);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+}

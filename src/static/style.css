@@ -41,9 +41,9 @@ body {
     width: 100%;
 }
 
-/********** INFO **********/
+/********** LEGEND **********/
 
-#info-box {
+#legend-box {
     position: absolute;
     z-index: 1;
     top: 10px;
@@ -56,17 +56,10 @@ body {
     box-shadow: 0 4px 6px var(--darkest);
 }
 
-#info-box h2 {
+#legend-box h2 {
     margin: 0 0 10px;
     font-size: 1.2rem;
     color: var(--blue);
-}
-
-#info-box p {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: var(--grey);
 }
 
 /********** SKY **********/
@@ -111,6 +104,13 @@ body {
     right: 10px;
 }
 
+/********** LAYER **********/
+
+#map-box {
+    top: 180px;
+    right: 10px;
+}
+
 /********** POPUP **********/
 
 .popup-container {
@@ -124,12 +124,5 @@ body {
 .popup-container h2 {
     margin: 0 0 10px;
     font-size: 1.2rem;
-    color: var(--blue);
-}
-
-.popup-container p {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: var(--greyer);
+    color: var(--darkest);
 }

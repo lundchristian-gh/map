@@ -1,65 +1,84 @@
-import { Endpoint, NightConfig, DayConfig } from "./const.js";
-import { getColorBasedOn, getMessageBasedOn, fetchData } from "./utils.js";
+import { Endpoint, DefaultConfig, MapStyle, SkyStyle } from "./const.js";
+import { getColorBasedOn, fetchData, errorPage } from "./utils.js";
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", run);
 
 let map = null;
 let token = null;
-let config = null;
-let whaleGJ = null;
-let otherGJ = null;
-let markers = [];
+let markers = null;
+let whaleData = null;
+let tromsData = null;
+
+// id = document id | value = handler
+const buttonHandlers = {
+    whale: () => onChangeData(whaleData),
+    other: () => onChangeData(tromsData),
+    day: () => onChangeTheme(SkyStyle.Day),
+    night: () => onChangeTheme(SkyStyle.Night),
+    streets: () => onChangeMap(MapStyle.Streets),
+    satellite: () => onChangeMap(MapStyle.SatelliteStreets),
+};
+
+async function run() {
+    token = await fetchData(Endpoint.Token);
+    whaleData = await fetchData(Endpoint.Whale);
+    tromsData = await fetchData(Endpoint.Other);
+    markers = [];
+    initializeMap(DefaultConfig);
+    addHandlers(buttonHandlers);
+}
+
+function initializeMap(config) {
+    if (token && whaleData) {
+        mapboxgl.accessToken = token.token;
+        map = new mapboxgl.Map(config.Map);
+        map.on("style.load", () => {
+            map.setFog(config.Sky);
+            map.addSource("mapbox-dem", config.Source);
+            map.setTerrain(config.Terrain);
+        });
+        map.on("load", () => {
+            whaleData.features.forEach((feature) => {
+                const properties = feature.properties;
+                const coordinates = feature.geometry.coordinates;
+                const popup = new mapboxgl.Popup({ maxWidth: "400px" }).setHTML(
+                    renderPopup(properties)
+                );
+                const marker = new mapboxgl.Marker({
+                    color: getColorBasedOn(properties.visited),
+                })
+                    .setLngLat(coordinates)
+                    .setPopup(popup)
+                    .addTo(map);
+                markers.push(marker);
+            });
+        });
+    } else {
+        document.body.innerHTML = errorPage();
+    }
+}
 
 function renderPopup(props) {
     return `
         <div class="popup-container">
-            <h2>${props.name} (${props.masl} masl)</h2>
-            <p>${getMessageBasedOn(props.visited)}</p>
+            <h2>${props.name} [${props.masl}]</h2>
         </div>
     `;
 }
 
-function addEventHandlers() {
-    const whaleButton = document.getElementById("whale");
-    const otherButton = document.getElementById("other");
-    whaleButton.addEventListener("click", () => onChangeDataLayer(whaleGJ));
-    otherButton.addEventListener("click", () => onChangeDataLayer(otherGJ));
-
-    const dayButton = document.getElementById("day");
-    const nightButton = document.getElementById("night");
-    dayButton.addEventListener("click", () => onChangeTheme("day"));
-    nightButton.addEventListener("click", () => onChangeTheme("night"));
+function addHandlers(handlers) {
+    Object.entries(handlers).forEach(([id, handler]) => {
+        const button = document.getElementById(id);
+        if (button) button.addEventListener("click", handler);
+    });
 }
 
-function addServiceWorkers() {
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-            .register(Endpoint.Worker)
-            .then((registration) => {
-                console.log(registration.scope);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    }
-}
-
-async function init() {
-    config = NightConfig;
-    token = await fetchData(Endpoint.Token);
-    whaleGJ = await fetchData(Endpoint.Whale);
-    otherGJ = await fetchData(Endpoint.Other);
-    addEventHandlers();
-    // addServiceWorkers();
-    main();
-}
-
-async function onChangeDataLayer(geojson) {
-    if (map && geojson) {
+function onChangeData(data) {
+    if (map && data) {
         markers.forEach((marker) => marker.remove());
         markers = [];
 
-        geojson.features.forEach((feature) => {
+        data.features.forEach((feature) => {
             const properties = feature.properties;
             const coordinates = feature.geometry.coordinates;
 
@@ -79,44 +98,14 @@ async function onChangeDataLayer(geojson) {
     }
 }
 
-function onChangeTheme(theme) {
-    if (theme === "day") {
-        config = DayConfig;
-    } else if (theme === "night") {
-        config = NightConfig;
-    }
+function onChangeMap(style) {
     if (map) {
-        map.setFog(config.Sky);
+        map.setStyle(style);
     }
 }
 
-function main() {
-    if (token && whaleGJ) {
-        mapboxgl.accessToken = token.token;
-        map = new mapboxgl.Map(config.Map);
-        map.on("style.load", () => {
-            map.setFog(config.Sky);
-            map.addSource("mapbox-dem", config.Source);
-            map.setTerrain(config.Terrain);
-        });
-        map.on("load", () => {
-            whaleGJ.features.forEach((feature) => {
-                const properties = feature.properties;
-                const coordinates = feature.geometry.coordinates;
-                const popup = new mapboxgl.Popup({ maxWidth: "400px" }).setHTML(
-                    renderPopup(properties)
-                );
-                const marker = new mapboxgl.Marker({
-                    color: getColorBasedOn(properties.visited),
-                })
-                    .setLngLat(coordinates)
-                    .setPopup(popup)
-                    .addTo(map);
-                markers.push(marker);
-            });
-        });
-    } else {
-        document.getElementById("map").innerHTML =
-            "<p>Please try again later</p>";
+function onChangeTheme(theme) {
+    if (map) {
+        map.setFog(theme);
     }
 }
