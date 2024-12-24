@@ -1,0 +1,65 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tromsdalstinden",
+                "masl": 1238,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.1457156,
+                    69.6071787
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sollidalsaksla",
+                "masl": 788,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.9879332,
+                    69.5864542
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Fagerfjellet",
+                "masl": 957,
+                "visited": "winter"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.2773307,
+                    69.5453344
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bønntuva",
+                "masl": 776,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.0033594,
+                    69.6062494
+                ]
+            }
+        }
+    ]
+}

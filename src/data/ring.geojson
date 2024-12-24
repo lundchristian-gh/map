@@ -1,0 +1,230 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Breitinden",
+                "masl": 860,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.1239277,
+                    69.8455882
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Stortinden",
+                "masl": 626,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.1306723,
+                    69.8207322
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Stortinden",
+                "masl": 824,
+                "visited": "both"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.1811059,
+                    69.8242587
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kløfttippen",
+                "masl": 920,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.1688198,
+                    69.8484068
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nordfjellet",
+                "masl": 1000,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.2339883,
+                    69.8490911
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Istinden",
+                "masl": 958,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.2450452,
+                    69.8540064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Store Skalltinden",
+                "masl": 900,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.2922935,
+                    69.871307
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bjørnskartindan",
+                "masl": 923,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.3350428,
+                    69.8784875
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Solltinden",
+                "masl": 1050,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.3336114,
+                    69.8895976
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Midtre Solltinden",
+                "masl": 1000,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.3444432,
+                    69.8937051
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nordre Solltinden",
+                "masl": 1000,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.3492932,
+                    69.8990812
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Solltindaksla",
+                "masl": 798,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.3304942,
+                    69.9110924
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Glimtinden",
+                "masl": 637,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.2578627,
+                    69.8646141
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Breifjellet",
+                "masl": 951,
+                "visited": "none"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.1936966,
+                    69.8659099
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "988",
+                "masl": 988,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    19.3197656,
+                    69.8924553
+                ]
+            }
+        }
+    ]
+}

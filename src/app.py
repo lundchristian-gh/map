@@ -17,7 +17,7 @@ def get_whale():
 
 @app.route("/other")
 def get_other():
-    return flask.send_from_directory("data", "other.geojson")
+    return flask.send_from_directory("data", "ring.geojson")
 
 
 @app.route("/worker")

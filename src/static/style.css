@@ -32,6 +32,34 @@ body {
     align-items: center;
 }
 
+.button {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--light);
+    border: 1px solid var(--grey);
+    background-color: var(--greyer);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    color: var(--dark);
+    background-color: var(--blue);
+}
+
+.button:focus {
+    outline: none;
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 5px var(--blue);
+}
+
+.button {
+    color: var(--light);
+    background-color: var(--dark);
+}
+
 /********** MAP **********/
 
 #map {
@@ -69,39 +97,31 @@ body {
     right: 10px;
 }
 
-.button {
-    padding: 8px 16px;
-    border: 1px solid var(--grey);
-    border-radius: 20px;
-    background-color: var(--greyer);
-    color: var(--light);
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.button:hover {
-    background-color: var(--blue);
-    color: var(--dark);
-}
-
-.button:focus {
-    outline: none;
-    border: 1px solid var(--blue);
-    box-shadow: 0 0 5px var(--blue);
-}
-
-.button {
-    color: var(--light);
-    background-color: var(--dark);
-}
-
 /********** LAYER **********/
 
 #layer-box {
     top: 100px;
     right: 10px;
+}
+
+/********** SCREEN **********/
+
+#screen {
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    right: 10px;
+    width: 68px;
+}
+
+/********** INFO **********/
+
+#info {
+    position: absolute;
+    z-index: 1;
+    bottom: 70px;
+    right: 10px;
+    width: 68px;
 }
 
 /********** LAYER **********/

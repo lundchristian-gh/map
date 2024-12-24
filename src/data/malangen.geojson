@@ -1,0 +1,50 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Breifjellet",
+                "masl": 901,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.7638876,
+                    69.4693239
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bentjordstinden",
+                "masl": 1096,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.641367,
+                    69.515348
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Durmålstinden",
+                "masl": 1169,
+                "visited": "summer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.6180051,
+                    69.511939
+                ]
+            }
+        }
+    ]
+}

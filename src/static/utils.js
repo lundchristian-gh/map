@@ -1,9 +1,15 @@
-// utils.js
-
 function getBasedOn(visited, mappings) {
     const defaultMapping = mappings.find(([key]) => key === "none");
     const mapping = mappings.find(([key]) => key === visited) || defaultMapping;
     return mapping[1];
+}
+
+export function renderPopup(props) {
+    return `
+        <div class="popup-container">
+            <h2>${props.name} [${props.masl}]</h2>
+        </div>
+    `;
 }
 
 export function getColorBasedOn(visited) {
@@ -44,5 +50,50 @@ export function errorPage() {
                 <p>Something went wrong. Please try again later.</p>
             </div>
         </div>
+    `;
+}
+
+export function logVisited(status, state) {
+    switch (status) {
+        case "summer":
+            state.summer += 1;
+            break;
+        case "winter":
+            state.winter += 1;
+            break;
+        case "both":
+            state.both += 1;
+            break;
+        case "none":
+            state.none += 1;
+            break;
+        default:
+            break;
+    }
+}
+
+export function getLegend() {
+    return `
+        <h2>Visited</h2>
+        <p>⚫ Both</p>
+        <p>🟡 Never</p>
+        <p>🔵 Winter</p>
+        <p>🟠 Summer</p>
+        `;
+}
+
+export function getInfo(state) {
+    const both = state.both;
+    const none = state.none;
+    const winter = state.winter;
+    const summer = state.summer;
+    const total = both + none + winter + summer;
+    const totalVisited = both + winter + summer;
+    const coverage = ((totalVisited / total) * 100).toFixed(2);
+    return `
+        <h2>Kvaløya</h2>
+        <p>Visited: ${totalVisited}</p>
+        <p>Missing: ${none}</p>
+        <p>Coverage: ${coverage}%</p>
     `;
 }

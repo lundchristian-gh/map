@@ -13,25 +13,29 @@
     </head>
     <body>
         <div id="map"></div>
-        <div id="legend-box">
-            <h2>Visited</h2>
-            <p>⚫ Both</p>
-            <p>🟡 Never</p>
-            <p>🔵 Winter</p>
-            <p>🟠 Summer</p>
+        <div id="ui">
+            <div id="legend-box">
+                <h2>Visited</h2>
+                <p>⚫ Both</p>
+                <p>🟡 Never</p>
+                <p>🔵 Winter</p>
+                <p>🟠 Summer</p>
+            </div>
+            <div class="box" id="sky-box">
+                <button class="button" id="night">🌙</button>
+                <button class="button" id="day">🌞</button>
+            </div>
+            <div class="box" id="layer-box">
+                <button class="button" id="whale">🐳</button>
+                <button class="button" id="other">🌍</button>
+            </div>
+            <div class="box" id="map-box">
+                <button class="button" id="satellite">🛰️</button>
+                <button class="button" id="streets">🧭</button>
+            </div>
         </div>
-        <div class="box" id="sky-box">
-            <button class="button" id="night">🌙</button>
-            <button class="button" id="day">🌞</button>
-        </div>
-        <div class="box" id="layer-box">
-            <button class="button" id="whale">🐳</button>
-            <button class="button" id="other">🌍</button>
-        </div>
-        <div class="box" id="map-box">
-            <button class="button" id="satellite">🛰️</button>
-            <button class="button" id="streets">🧭</button>
-        </div>
+        <button class="button" id="info">♻️</button>
+        <button class="button" id="screen">Hide</button>
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
         <script type="module" src="/static/script.js"></script>
     </body>
