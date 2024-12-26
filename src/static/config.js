@@ -50,8 +50,10 @@ export const DefaultConfig = {
 };
 
 export const Endpoint = {
-    Whale: "/whale",
-    Other: "/other",
+    Kvaloya: "/kvaloya",
+    Malangen: "/malangen",
+    Fastlandet: "/fastlandet",
+    Ringvassoya: "/ringvassoya",
     Token: "/token",
     Worker: "/worker",
 };

@@ -1,14 +1,14 @@
 /********** BASE **********/
 
 :root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     --dark: #0d1117;
     --darkest: #000000;
     --light: #c9d1d9;
     --grey: #8b949e;
     --greyer: #30363d;
     --blue: #58a6ff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 body {
@@ -16,23 +16,45 @@ body {
     padding: 0;
 }
 
-/********** COMMON **********/
+h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
 
-.box {
-    position: absolute;
+/********** CLASSES **********/
+
+.btn-box {
+    gap: 10px;
     z-index: 1;
+    display: flex;
+    position: absolute;
     padding: 10px 20px;
     border-radius: 50px;
+    align-items: center;
     color: var(--light);
     border: 1px solid var(--greyer);
     background-color: var(--dark);
     box-shadow: 0 4px 6px var(--darkest);
-    gap: 10px;
-    display: flex;
-    align-items: center;
 }
 
-.button {
+.txt-box {
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    position: absolute;
+    color: var(--light);
+    border: 1px solid var(--greyer);
+    background-color: var(--dark);
+    box-shadow: 0 4px 6px var(--darkest);
+}
+
+.txt-box h2 {
+    color: var(--blue);
+}
+
+.btn {
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -44,94 +66,21 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.button:hover {
+.btn:hover {
     color: var(--dark);
     background-color: var(--blue);
 }
 
-.button:focus {
+.btn:focus {
     outline: none;
     border: 1px solid var(--blue);
     box-shadow: 0 0 5px var(--blue);
 }
 
-.button {
+.btn {
     color: var(--light);
     background-color: var(--dark);
 }
-
-/********** MAP **********/
-
-#map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-/********** LEGEND **********/
-
-#legend-box {
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    color: var(--light);
-    border: 1px solid var(--greyer);
-    background-color: var(--dark);
-    box-shadow: 0 4px 6px var(--darkest);
-}
-
-#legend-box h2 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    color: var(--blue);
-}
-
-/********** SKY **********/
-
-#sky-box {
-    top: 20px;
-    right: 10px;
-}
-
-/********** LAYER **********/
-
-#layer-box {
-    top: 100px;
-    right: 10px;
-}
-
-/********** SCREEN **********/
-
-#screen {
-    position: absolute;
-    z-index: 1;
-    bottom: 30px;
-    right: 10px;
-    width: 68px;
-}
-
-/********** INFO **********/
-
-#info {
-    position: absolute;
-    z-index: 1;
-    bottom: 70px;
-    right: 10px;
-    width: 68px;
-}
-
-/********** LAYER **********/
-
-#map-box {
-    top: 180px;
-    right: 10px;
-}
-
-/********** POPUP **********/
 
 .popup-container {
     top: 10px;
@@ -142,7 +91,45 @@ body {
 }
 
 .popup-container h2 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
     color: var(--darkest);
+}
+
+/********** IDS **********/
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#layer-box {
+    top: 20px;
+    right: 10px;
+}
+
+#sky-box {
+    top: 100px;
+    right: 10px;
+}
+
+#map-box {
+    top: 180px;
+    right: 10px;
+}
+
+#screen {
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    right: 10px;
+    width: 68px;
+}
+
+#info {
+    position: absolute;
+    z-index: 1;
+    bottom: 70px;
+    right: 10px;
+    width: 68px;
 }

@@ -10,14 +10,24 @@ def get_token():
     return flask.send_from_directory("data", "config.json")
 
 
-@app.route("/whale")
-def get_whale():
-    return flask.send_from_directory("data", "whale.geojson")
+@app.route("/kvaloya")
+def get_kvaloya():
+    return flask.send_from_directory("data", "kvaloya.geojson")
 
 
-@app.route("/other")
-def get_other():
-    return flask.send_from_directory("data", "ring.geojson")
+@app.route("/ringvassoya")
+def get_ringvassoya():
+    return flask.send_from_directory("data", "ringvassoya.geojson")
+
+
+@app.route("/malangen")
+def get_malangen():
+    return flask.send_from_directory("data", "malangen.geojson")
+
+
+@app.route("/fastlandet")
+def get_fastlandet():
+    return flask.send_from_directory("data", "fastlandet.geojson")
 
 
 @app.route("/worker")

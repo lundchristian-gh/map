@@ -53,23 +53,28 @@ export function errorPage() {
     `;
 }
 
-export function logVisited(status, state) {
-    switch (status) {
-        case "summer":
-            state.summer += 1;
-            break;
-        case "winter":
-            state.winter += 1;
-            break;
-        case "both":
-            state.both += 1;
-            break;
-        case "none":
-            state.none += 1;
-            break;
-        default:
-            break;
-    }
+export function logVisited(geojson) {
+    let result = { both: 0, none: 0, summer: 0, winter: 0 };
+    geojson.features.forEach((feature) => {
+        const visited = feature.properties.visited;
+        switch (visited) {
+            case "summer":
+                result.summer += 1;
+                break;
+            case "winter":
+                result.winter += 1;
+                break;
+            case "both":
+                result.both += 1;
+                break;
+            case "none":
+                result.none += 1;
+                break;
+            default:
+                break;
+        }
+    });
+    return result;
 }
 
 export function getLegend() {
@@ -82,16 +87,17 @@ export function getLegend() {
         `;
 }
 
-export function getInfo(state) {
+export function getInfo(state, name) {
     const both = state.both;
     const none = state.none;
     const winter = state.winter;
     const summer = state.summer;
+
     const total = both + none + winter + summer;
     const totalVisited = both + winter + summer;
     const coverage = ((totalVisited / total) * 100).toFixed(2);
     return `
-        <h2>Kvaløya</h2>
+        <h2>${name}</h2>
         <p>Visited: ${totalVisited}</p>
         <p>Missing: ${none}</p>
         <p>Coverage: ${coverage}%</p>
