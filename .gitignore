@@ -1,4 +1,6 @@
 .venv/
+.misc/
 .vscode/
 __pycache__/
 config.json
+notes.md

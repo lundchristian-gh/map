@@ -1,3 +1,5 @@
+// config.js
+
 export const MapStyle = {
     Dark: "mapbox://styles/mapbox/dark-v11",
     Light: "mapbox://styles/mapbox/light-v11",
