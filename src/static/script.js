@@ -17,13 +17,9 @@ let _areas = [
 async function loadAreas(areas) {
     for (let index = 0; index < areas.length; index++) {
         const area = areas[index];
-        try {
-            const response = await fetch(area.endpoint);
-            area.geojson = await response.json();
-            area.updateStatus();
-        } catch (error) {
-            throw error;
-        }
+        const response = await fetch(area.endpoint);
+        area.geojson = await response.json();
+        area.updateStatus();
     }
 }
 
@@ -60,13 +56,9 @@ function addClickHandlers(handlers) {
 }
 
 async function loadToken(state) {
-    try {
-        const response = await fetch(Endpoint.Token);
-        const token = await response.json();
-        state.token = token.token;
-    } catch (error) {
-        throw error;
-    }
+    const response = await fetch(Endpoint.Token);
+    const token = await response.json();
+    state.token = token.token;
 }
 
 async function run() {

@@ -5,7 +5,6 @@ export const State = () => ({
     token: null, // MapBox token string
     markers: [], // list of markers
     toggleUI: null, // boolean UI toggler
-    toggleInfoBox: null, // boolean info toggler
 });
 
 export const Area = (name, symbol, id, endpoint) => ({

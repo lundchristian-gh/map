@@ -1,6 +1,8 @@
 .venv/
 .misc/
+.learn/
 .vscode/
+node_modules/
 __pycache__/
 config.json
 notes.md
