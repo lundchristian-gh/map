@@ -2,9 +2,12 @@
     "compilerOptions": {
         "target": "es6",
         "module": "es6",
+        "moduleResolution": "node",
         "outDir": "./src/static",
         "rootDir": "./src/ts",
-        "strict": true
+        "strict": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
     },
     "include": ["src/ts/**/*"],
     "exclude": ["node_modules"]

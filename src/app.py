@@ -5,8 +5,8 @@ app = flask.Flask(__name__)
 flask_cors.CORS(app)
 
 
-@app.route("/token")
-def get_token():
+@app.route("/config")
+def get_config():
     return flask.send_from_directory("data", "config.json")
 
 

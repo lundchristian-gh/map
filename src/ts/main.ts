@@ -1,145 +1,131 @@
-class Area {
-    data: any; // GeoJSON
+export class Peak {
     name: string;
-    endpoint: string;
-    status: { summer: number; winter: number; both: number; none: number };
-
-    constructor(name: string, endpoint: string) {
+    masl: number;
+    visited: string;
+    coordinates: [number, number];
+    constructor(
+        name: string,
+        masl: number,
+        visited: string,
+        coordinates: [number, number]
+    ) {
         this.name = name;
-        this.endpoint = endpoint;
-        this.status = { summer: 0, winter: 0, both: 0, none: 0 };
+        this.masl = masl;
+        this.visited = visited;
+        this.coordinates = coordinates;
+    }
+}
+
+export class VisitationStats {
+    both: number;
+    none: number;
+    winter: number;
+    summer: number;
+
+    constructor() {
+        this.both = 0;
+        this.none = 0;
+        this.winter = 0;
+        this.summer = 0;
     }
 
-    async load(): Promise<void> {
-        const response: Response = await fetch(this.endpoint);
-        this.data = await response.json();
-        for (let index = 0; index < this.data.features.length; index++) {
-            const visited: string =
-                this.data.features[index].properties.visited;
-            if (this.status[visited] !== undefined) {
-                this.status[visited] += 1;
-            }
+    update(visited: string): void {
+        switch (visited) {
+            case "both":
+                this.both += 1;
+                break;
+            case "none":
+                this.none += 1;
+                break;
+            case "summer":
+                this.summer += 1;
+                break;
+            case "winter":
+                this.winter += 1;
+                break;
+            default:
+                break;
         }
     }
 }
 
-class Region {
+export class Area {
+    data: any; // GeoJSON
+    name: string;
+    peaks: Peak[];
+    visitation: VisitationStats;
+    constructor(name: string, data: any) {
+        this.name = name;
+        this.peaks = [];
+        this.data = data;
+        this.visitation = new VisitationStats();
+    }
+
+    load() {
+        const features = this.data.features;
+        for (let index = 0; index < features.length; index++) {
+            const feature = features[index];
+            const peak = new Peak(
+                feature.properties.name,
+                feature.properties.masl,
+                feature.properties.visited,
+                feature.geometry.coordinates
+            );
+            this.visitation.update(feature.properties.visited);
+            this.peaks.push(peak);
+        }
+    }
+}
+
+export class Region {
     name: string;
     areas: Area[];
-
     constructor(name: string, areas: Area[]) {
         this.name = name;
         this.areas = areas;
     }
-
-    async load(): Promise<void> {
+    load() {
         for (let index = 0; index < this.areas.length; index++) {
-            await this.areas[index].load();
+            this.areas[index].load();
         }
     }
 }
 
-class MapService {}
+/********************************************************************/
 
-class Logic {
-    map: MapService;
-    region: Region;
-    sky: {
-        box: HTMLElement | null;
-        day: {
-            symbol: string;
-            button: HTMLElement | null;
-        };
-        night: {
-            symbol: string;
-            button: HTMLElement | null;
-        };
-        render(): void;
-    };
-    visibility: {
-        visible: boolean;
-        button: HTMLElement | null;
-        box: HTMLElement | null;
-        isValid(): this is { button: HTMLElement; box: HTMLElement };
-    };
+// import mapboxgl from "mapbox-gl";
 
-    constructor(map: MapService, region: Region) {
-        this.map = map;
-        this.region = region;
-        this.visibility = {
-            visible: false,
-            button: document.getElementById("gui-btn"),
-            box: document.getElementById("gui-box"),
-            isValid(): this is { button: HTMLElement; box: HTMLElement } {
-                return this.button !== null && this.box !== null;
-            },
-        };
-        this.sky = {
-            box: document.getElementById("sky-box"),
-            day: {
-                symbol: "string",
-                button: null,
-            },
-            night: {
-                symbol: "string",
-                button: null,
-            },
-            render(): void {
-                this.sky.box.append;
-            },
-        };
-        this.setUp();
-    }
-
-    setUp() {
-        if (!this.visibility.isValid()) {
-            console.log("ERROR");
-            return;
-        }
-        this.visibility.visible = true;
-        this.visibility.button.innerHTML = "Hide";
-        this.visibility.button.addEventListener("click", () =>
-            this.toggleVisibility()
-        );
-    }
-
-    toggleVisibility() {
-        if (!this.visibility.isValid()) {
-            console.log("ERROR");
-            return;
-        }
-        if (this.visibility.visible) {
-            this.visibility.visible = false;
-            this.visibility.box.hidden = true;
-            this.visibility.button.innerHTML = "Show";
-        } else {
-            this.visibility.visible = true;
-            this.visibility.box.hidden = false;
-            this.visibility.button.innerHTML = "Hide";
-        }
-    }
-}
-
-async function main() {
-    const map: MapService = new MapService();
-
-    const areas: Area[] = [
-        new Area("Kvaløya", "http://127.0.0.1:8080/kvaloya"),
-        new Area("Malangen", "http://127.0.0.1:8080/malangen"),
-        new Area("Ringvassøya", "http://127.0.0.1:8080/ringvassoya"),
+async function main(): Promise<void> {
+    const endpoints: string[] = [
+        "http://127.0.0.1:8080/config",
+        "http://127.0.0.1:8080/kvaloya",
+        "http://127.0.0.1:8080/malangen",
+        "http://127.0.0.1:8080/fastlandet",
+        "http://127.0.0.1:8080/ringvassoya",
     ];
 
-    const troms: Region = new Region("Troms", areas);
-
-    // const gui = new Logic(map, troms);
-
-    try {
-        await troms.load();
-        // console.log(troms.areas[0]);
-    } catch (error) {
-        console.log(error);
+    const jsonData: any[] = [];
+    for (let index: number = 0; index < endpoints.length; index++) {
+        const response = await fetch(endpoints[index]);
+        const data = await response.json();
+        if (!data) {
+            console.log("Error fetching " + endpoints[index]);
+            return;
+        }
+        jsonData.push(data);
     }
+
+    const token: string = jsonData[0].token;
+
+    const areas: Area[] = [
+        new Area("Kvaløya", jsonData[1]),
+        new Area("Malangen", jsonData[2]),
+        new Area("Fastlandet", jsonData[3]),
+        new Area("Ringvassøya", jsonData[4]),
+    ];
+
+    const region: Region = new Region("Troms", areas);
+    region.load();
 }
 
 main();
-// document.addEventListener("DOMContentLoaded", main);
